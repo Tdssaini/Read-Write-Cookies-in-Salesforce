@@ -36,3 +36,5 @@ Cookie cookie = ApexPages.currentPage().getCookies().get('WPDEMO');
 This will return Cookie object and from that object we can get value by getValue() method. This will return value of that cookie.
 
 cookieValue = cookie.getValue();
+
+To know more about, refer to my blog post @ http://blog.singhtarandeep.com/blog/2017/08/17/readwrite-cookies-salesforce/

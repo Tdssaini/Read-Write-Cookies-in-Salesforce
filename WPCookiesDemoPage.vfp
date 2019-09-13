@@ -1,0 +1,16 @@
+<apex:page controller="WPCookiesDemoController" showHeader="false" sidebar="false"> 
+  <apex:form style="text-align:center;padding:10px"> 
+    <h1> 
+      Welcome to Demo Page. Select your Option 
+    </h1> 
+    <br/>
+    <br/> 
+    <apex:commandButton action="{!readCookies}" value="Read Cookies" oncomplete="alert('{!cookieValue}')"/>
+    <br/>
+    <br/>
+    Enter Cookie Data to Update <apex:inputText value="{!enteredCookieData}"/>
+    <br/>
+    <br/>
+    <apex:commandButton action="{!addCookies}" value="Add Cookies" onComplete="alert('Cookies Inserted Successfully')"/>
+  </apex:form> 
+</apex:page>

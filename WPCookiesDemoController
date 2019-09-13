@@ -1,0 +1,23 @@
+public class WPCookiesDemoController {
+  public String cookieValue{get;set;} 
+  public String enteredCookieData{get;set;} 
+  
+  public WPCookiesDemoController(){ 
+    Cookie cookie = ApexPages.currentPage().getCookies().get('WPDEMO'); 
+    if(cookie !=null){ 
+      cookieValue = cookie.getValue(); 
+    } 
+   } 
+   
+   public void readCookies(){ 
+    Cookie cookie = ApexPages.currentPage().getCookies().get('WPDEMO'); 
+    if(cookie !=null){ 
+      cookieValue = cookie.getValue(); 
+     } 
+    } 
+    
+    public void addCookies(){ 
+      Cookie cookie = new Cookie('WPDEMO',enteredCookieData,null,-1,false);
+      ApexPages.currentPage().setCookies(new Cookie[]{cookie}); 
+    } 
+}
